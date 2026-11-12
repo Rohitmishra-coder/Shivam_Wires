@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHIVAM WIRES | Your Trusted Partner in Electrical &amp; Power Solutions</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts (with reliable system fallbacks) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Rajdhani:wght@700;800&display=swap" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              950: '#050d1e',
+              900: '#0a1632',
+              800: '#10234d',
+              700: '#18336e',
+            },
+            amber: {
+              300: '#fcd34d',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            },
+            copper: {
+              400: '#e88d5a',
+              500: '#c86d3b',
+              600: '#a35227',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+            display: ['Rajdhani', 'Impact', 'Arial Black', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      background-color: #050d1e;
+      color: #f8fafc;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Reliable Metallic Gold/Amber Brand Text (Visible immediately even before web fonts load) */
+    .brand-gold-text {
+      color: #fbbf24;
+      background: linear-gradient(180deg, #fef08a 0%, #fbbf24 45%, #d97706 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 3px 10px rgba(245, 158, 11, 0.35));
+    }
+
+    .gold-btn-gradient {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 55%, #d97706 100%);
+    }
+
+    .gold-btn-gradient:hover {
+      background: linear-gradient(135deg, #fde68a 0%, #fbbf24 55%, #f59e0b 100%);
+    }
+
+    .hero-glow {
+      background: radial-gradient(circle at 70% 45%, rgba(245, 158, 11, 0.22) 0%, rgba(16, 35, 77, 0.45) 45%, rgba(5, 13, 30, 1) 78%);
+    }
+
+    .card-hover {
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-4px);
+      border-color: rgba(251, 191, 36, 0.65);
+      box-shadow: 0 12px 30px -10px rgba(245, 158, 11, 0.25);
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #050d1e;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #18336e;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #f59e0b;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-amber-500 selection:text-navy-950">
+
+  <!-- Toast Notification Container (Replaces alert()) -->
+  <div id="toast-container" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 flex flex-col gap-2 pointer-events-none w-11/12 max-w-md"></div>
+
+  <!-- Top Utility Contact Bar -->
+  <div class="bg-navy-950 border-b border-amber-500/20 text-xs text-slate-300 py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-4">
+        <span class="inline-flex items-center gap-1.5 text-amber-400 font-semibold">
+          <i class="fa-solid fa-bolt"></i> SHIVAM WIRES &bull; All Kinds of Cable &amp; Wires
+        </span>
+        <span class="hidden lg:inline-flex items-center gap-1.5 text-slate-400">
+          <i class="fa-solid fa-location-dot text-amber-500"></i> 2, Bepari Tola Lane, Near: Chandni Chowk, Bowbazar, Kolkata - 700054
+        </span>
+      </div>
+      <div class="flex items-center gap-4 ml-auto">
+        <a href="tel:+916290665018" class="hover:text-amber-400 transition flex items-center gap-1.5 font-medium">
+          <i class="fa-solid fa-phone text-amber-500"></i> +91 6290665018
+        </a>
+        <a href="mailto:shivamchowdhary432@gmail.com" class="hidden sm:flex hover:text-amber-400 transition items-center gap-1.5">
+          <i class="fa-solid fa-envelope text-amber-500"></i> shivamchowdhary432@gmail.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Top Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-navy-900/95 backdrop-blur-md border-b border-amber-500/30 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Prominent SHIVAM WIRES Brand Logo -->
+        <a href="#home" class="flex items-center gap-3 group shrink-0">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-amber-300 via-amber-500 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/30 group-hover:scale-105 transition">
+            <svg class="w-7 h-7 text-navy-950" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18" cy="18" r="13" stroke="currentColor" stroke-width="3.5" />
+              <circle cx="18" cy="18" r="8" stroke="currentColor" stroke-width="2.5" stroke-dasharray="4 2" />
+              <circle cx="18" cy="18" r="3.5" fill="currentColor" />
+              <path d="M27 27L33 33" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-extrabold text-2xl sm:text-3xl tracking-wider brand-gold-text leading-none uppercase">
+              SHIVAM WIRES
+            </span>
+            <span class="text-[10px] sm:text-xs uppercase tracking-widest text-amber-200/80 font-semibold mt-0.5">
+              Electrical &amp; Power Solutions
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-200">
+          <a href="#home" class="hover:text-amber-400 transition">Home</a>
+          <a href="#about-trust" class="hover:text-amber-400 transition">Why Shivam Wires</a>
+          <a href="#catalog" class="hover:text-amber-400 transition">Cables &amp; Wires</a>
+          <a href="#bulk-supply" class="hover:text-amber-400 transition">Bulk &amp; Contractors</a>
+          <a href="#contact" class="hover:text-amber-400 transition">Store Address</a>
+        </nav>
+
+        <!-- Header Action Buttons -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <a href="tel:+916290665018" class="hidden md:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-amber-400/50 text-amber-300 hover:bg-amber-500/15 font-bold text-sm transition">
+            <i class="fa-solid fa-phone-volume"></i>
+            <span>Call Now</span>
+          </a>
+
+          <!-- Quote Cart Trigger Button -->
+          <button onclick="toggleQuoteDrawer(true)" class="relative inline-flex items-center gap-2 px-3.5 sm:px-4 py-2.5 rounded-xl gold-btn-gradient text-navy-950 font-extrabold text-xs sm:text-sm shadow-lg shadow-amber-500/25 transition active:scale-95">
+            <i class="fa-solid fa-file-invoice"></i>
+            <span>Quote List</span>
+            <span id="nav-cart-badge" class="ml-0.5 px-2 py-0.5 text-xs font-extrabold rounded-full bg-navy-950 text-amber-400">
+              0
+            </span>
+          </button>
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl bg-navy-800 border border-white/15 text-slate-200 hover:text-amber-400" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-navy-950 border-t border-amber-500/20 px-4 pt-3 pb-5 space-y-2">
+      <div class="px-3 py-2 border-b border-white/10 mb-2">
+        <p class="font-display font-extrabold text-xl brand-gold-text">SHIVAM WIRES</p>
+        <p class="text-xs text-slate-400">Your Trusted Partner in Electrical &amp; Power Solutions</p>
+      </div>
+      <a href="#home" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-lg text-slate-200 hover:bg-navy-800 hover:text-amber-400 font-medium">Home</a>
+      <a href="#about-trust" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-lg text-slate-200 hover:bg-navy-800 hover:text-amber-400 font-medium">Why Shivam Wires</a>
+      <a href="#catalog" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-lg text-slate-200 hover:bg-navy-800 hover:text-amber-400 font-medium">Wires &amp; Cables Catalog</a>
+      <a href="#bulk-supply" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-lg text-slate-200 hover:bg-navy-800 hover:text-amber-400 font-medium">Contractors &amp; Bulk Supply</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-lg text-slate-200 hover:bg-navy-800 hover:text-amber-400 font-medium">Store Location &amp; Contact</a>
+      <div class="pt-2 flex gap-2">
+        <a href="tel:+916290665018" class="flex-1 text-center py-2.5 rounded-xl bg-navy-800 border border-amber-500/40 text-amber-400 font-bold text-sm">
+          <i class="fa-solid fa-phone mr-1.5"></i> +91 6290665018
+        </a>
+        <a href="https://wa.me/916290665018?text=Hello%20SHIVAM%20WIRES,%20I%20would%20like%20to%20enquire%20about%20wires%20and%20cables." target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-2.5 rounded-xl bg-emerald-600 text-white font-bold text-sm">
+          <i class="fa-brands fa-whatsapp mr-1.5"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative hero-glow pt-10 pb-16 lg:pt-16 lg:pb-24 border-b border-amber-500/20 overflow-hidden">
+    <!-- Subtle Electrical Spark Grid Pattern -->
+    <div class="absolute inset-0 opacity-15 pointer-events-none" style="background-image: radial-gradient(#fbbf24 1px, transparent 1px); background-size: 30px 30px;"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        
+        <!-- Left Hero Content Column -->
+        <div class="lg:col-span-7 text-center lg:text-left">
+          <!-- Online Availability Pill -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/15 border border-amber-400/50 text-amber-300 text-xs sm:text-sm font-bold tracking-wide uppercase mb-5 shadow-md">
+            <i class="fa-solid fa-cart-shopping text-amber-400"></i>
+            <span>Shop Online Now &bull; Available Online &amp; In-Store</span>
+          </div>
+
+          <!-- Large Bold Metallic Gold/Amber Headline for SHIVAM WIRES -->
+          <h1 class="font-display font-extrabold tracking-tight leading-none mb-4">
+            <span class="block text-5xl sm:text-7xl lg:text-8xl brand-gold-text uppercase tracking-wide">
+              SHIVAM WIRES
+            </span>
+            <span class="block text-xl sm:text-3xl lg:text-4xl text-white font-bold uppercase tracking-wide mt-3 leading-snug">
+              YOUR TRUSTED PARTNER IN ELECTRICAL &amp; POWER SOLUTIONS
+            </span>
+          </h1>
+
+          <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+            Welcome to <strong class="text-amber-400 font-bold">SHIVAM WIRES</strong> — your one-stop destination in Kolkata for <strong class="text-white">All Kinds of Cable &amp; Wires</strong>. From FR/FRLS house wiring copper coils to multi-core flexible, submersible, and heavy-duty armoured power cables.
+          </p>
+
+          <!-- Primary CTA Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
+            <a href="#catalog" class="w-full sm:w-auto px-7 py-4 rounded-2xl gold-btn-gradient text-navy-950 font-extrabold text-base shadow-xl shadow-amber-500/30 flex items-center justify-center gap-2.5 transition transform hover:-translate-y-0.5">
+              <span>Explore Wires &amp; Cables</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="https://wa.me/916290665018?text=Hello%20SHIVAM%20WIRES,%20please%20share%20your%20latest%20wire%20and%20cable%20price%20list." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-navy-800 hover:bg-navy-700 border border-amber-400/50 text-white font-bold text-base flex items-center justify-center gap-2.5 transition">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i>
+              <span>Order on WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- 4 Exact Poster Badges -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div class="bg-navy-900/90 border-2 border-amber-500/50 rounded-2xl p-3.5 text-center shadow-lg">
+              <div class="w-9 h-9 mx-auto mb-2 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center">
+                <i class="fa-solid fa-award text-base"></i>
+              </div>
+              <p class="font-display font-bold text-sm sm:text-base text-amber-400 tracking-wide uppercase">100% Pure Copper</p>
+            </div>
+            <div class="bg-navy-900/90 border-2 border-amber-500/50 rounded-2xl p-3.5 text-center shadow-lg">
+              <div class="w-9 h-9 mx-auto mb-2 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center">
+                <i class="fa-solid fa-fire-extinguisher text-base"></i>
+              </div>
+              <p class="font-display font-bold text-sm sm:text-base text-amber-400 tracking-wide uppercase">Fire Retardant</p>
+            </div>
+            <div class="bg-navy-900/90 border-2 border-amber-500/50 rounded-2xl p-3.5 text-center shadow-lg">
+              <div class="w-9 h-9 mx-auto mb-2 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center">
+                <i class="fa-solid fa-shield-halved text-base"></i>
+              </div>
+              <p class="font-display font-bold text-sm sm:text-base text-amber-400 tracking-wide uppercase">Heavy Duty &amp; Long Lasting</p>
+            </div>
+            <div class="bg-navy-900/90 border-2 border-amber-500/50 rounded-2xl p-3.5 text-center shadow-lg">
+              <div class="w-9 h-9 mx-auto mb-2 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center">
+                <i class="fa-solid fa-cart-shopping text-base"></i>
+              </div>
+              <p class="font-display font-bold text-sm sm:text-base text-amber-400 tracking-wide uppercase">Available Online</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual Card: Custom High-Detail SVG Illustration of Multi-Core Armoured Cables & Coloured Coils -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-md bg-gradient-to-b from-navy-800/95 to-navy-950 border-2 border-amber-500/50 rounded-3xl p-6 shadow-2xl shadow-amber-500/20">
+            <!-- Card Top Header -->
+            <div class="flex items-center justify-between mb-3">
+              <span class="font-display font-extrabold text-lg brand-gold-text tracking-wider uppercase">
+                SHIVAM WIRES
+              </span>
+              <span class="px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-300 text-[11px] font-bold uppercase">
+                All Kinds of Cable &amp; Wires
+              </span>
+            </div>
+
+            <!-- Vector Illustration of Multi-Core Armoured Cable & Coloured Wire Coils -->
+            <svg viewBox="0 0 420 330" class="w-full h-auto drop-shadow-2xl" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="amberGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.38" />
+                  <stop offset="100%" stop-color="#050d1e" stop-opacity="0" />
+                </radialGradient>
+                <linearGradient id="copperGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#f6b28b" />
+                  <stop offset="50%" stop-color="#d97736" />
+                  <stop offset="100%" stop-color="#8c3e14" />
+                </linearGradient>
+                <linearGradient id="armorGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#64748b" />
+                  <stop offset="50%" stop-color="#cbd5e1" />
+                  <stop offset="100%" stop-color="#475569" />
+                </linearGradient>
+                <linearGradient id="sheathBlack" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#0f172a" />
+                  <stop offset="45%" stop-color="#334155" />
+                  <stop offset="100%" stop-color="#090d16" />
+                </linearGradient>
+              </defs>
+
+              <circle cx="210" cy="165" r="150" fill="url(#amberGlow)" />
+
+              <!-- Lightning Sparks -->
+              <path d="M50 145 L90 125 L80 150 L120 135" stroke="#fbbf24" stroke-width="2.5" fill="none" opacity="0.8" />
+              <path d="M370 140 L330 120 L340 145 L300 130" stroke="#fbbf24" stroke-width="2.5" fill="none" opacity="0.8" />
+
+              <!-- Center Heavy Duty Multi-Core Armoured Cable -->
+              <rect x="165" y="130" width="90" height="145" rx="8" fill="url(#sheathBlack)" stroke="#475569" stroke-width="1.5" />
+              <rect x="173" y="100" width="74" height="35" rx="4" fill="url(#armorGrad)" />
+              <path d="M175 103 L185 133 M188 103 L198 133 M201 103 L211 133 M214 103 L224 133 M227 103 L237 133" stroke="#1e293b" stroke-width="2" />
+
+              <!-- Inner Colored Insulation Cores & Pure Copper Strands -->
+              <rect x="179" y="60" width="18" height="42" rx="4" fill="#ef4444" />
+              <rect x="182" y="33" width="12" height="28" rx="2" fill="url(#copperGrad)" />
+
+              <rect x="201" y="50" width="18" height="52" rx="4" fill="#facc15" />
+              <rect x="204" y="20" width="12" height="31" rx="2" fill="url(#copperGrad)" />
+
+              <rect x="223" y="63" width="18" height="39" rx="4" fill="#3b82f6" />
+              <rect x="226" y="37" width="12" height="27" rx="2" fill="url(#copperGrad)" />
+
+              <!-- Left Coil (Red House Wire Roll) -->
+              <g transform="translate(30, 190)">
+                <ellipse cx="65" cy="65" rx="58" ry="26" fill="#991b1b" />
+                <ellipse cx="65" cy="56" rx="58" ry="26" fill="#dc2626" />
+                <ellipse cx="65" cy="47" rx="58" ry="26" fill="#ef4444" stroke="#fca5a5" stroke-width="1" />
+                <ellipse cx="65" cy="47" rx="26" ry="11" fill="#050d1e" />
+                <path d="M115 62 Q138 65 148 56" stroke="#ef4444" stroke-width="6" stroke-linecap="round" fill="none" />
+                <path d="M148 56 L160 50" stroke="url(#copperGrad)" stroke-width="4" stroke-linecap="round" />
+              </g>
+
+              <!-- Right Coil (Blue Flexible Wire Roll) -->
+              <g transform="translate(260, 190)">
+                <ellipse cx="65" cy="65" rx="58" ry="26" fill="#1e3a8a" />
+                <ellipse cx="65" cy="56" rx="58" ry="26" fill="#2563eb" />
+                <ellipse cx="65" cy="47" rx="58" ry="26" fill="#3b82f6" stroke="#93c5fd" stroke-width="1" />
+                <ellipse cx="65" cy="47" rx="26" ry="11" fill="#050d1e" />
+                <path d="M15 62 Q-8 65 -18 56" stroke="#3b82f6" stroke-width="6" stroke-linecap="round" fill="none" />
+                <path d="M-18 56 L-30 50" stroke="url(#copperGrad)" stroke-width="4" stroke-linecap="round" />
+              </g>
+
+              <!-- Front Center Yellow Wire Roll -->
+              <g transform="translate(145, 226)">
+                <ellipse cx="65" cy="55" rx="56" ry="24" fill="#a16207" />
+                <ellipse cx="65" cy="47" rx="56" ry="24" fill="#eab308" />
+                <ellipse cx="65" cy="39" rx="56" ry="24" fill="#facc15" stroke="#fef08a" stroke-width="1" />
+                <ellipse cx="65" cy="39" rx="24" ry="10" fill="#050d1e" />
+              </g>
+            </svg>
+
+            <!-- Bottom Card Bar -->
+            <div class="mt-2 pt-4 border-t border-white/10 flex items-center justify-between text-xs sm:text-sm">
+              <div>
+                <p class="text-slate-400">Chandni Chowk, Bowbazar</p>
+                <p class="font-bold text-white">Kolkata - 700054</p>
+              </div>
+              <a href="#catalog" class="px-4 py-2 rounded-xl gold-btn-gradient text-navy-950 font-extrabold hover:opacity-95 transition">
+                View Catalog &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Trust Section Featuring SHIVAM WIRES -->
+  <section id="about-trust" class="py-16 lg:py-20 bg-navy-900/70 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">Quality You Can Rely On</span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white mt-2 uppercase">
+          WHY CHOOSE <span class="brand-gold-text">SHIVAM WIRES</span>?
+        </h2>
+        <p class="text-slate-300 mt-3 text-sm sm:text-base leading-relaxed">
+          At <strong class="text-amber-400">SHIVAM WIRES</strong>, we power homes, offices, retail complexes, and factories with high-conductivity copper cables built for maximum safety and durability.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-navy-950 border border-amber-500/25 rounded-2xl p-6 card-hover">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/15 border border-amber-400/40 flex items-center justify-center text-amber-400 text-xl mb-5">
+            <i class="fa-solid fa-bolt-lightning"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-2 uppercase">100% Pure Copper</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Manufactured using high-purity annealed electrolytic copper conductors to ensure low resistance, zero overheating, and energy savings.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-navy-950 border border-amber-500/25 rounded-2xl p-6 card-hover">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/15 border border-amber-400/40 flex items-center justify-center text-amber-400 text-xl mb-5">
+            <i class="fa-solid fa-fire-flame-curved"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-2 uppercase">Fire Retardant (FR / FRLS)</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Engineered with flame-retardant and low-smoke PVC/XLPE insulation that prevents fire propagation during electrical short circuits.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-navy-950 border border-amber-500/25 rounded-2xl p-6 card-hover">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/15 border border-amber-400/40 flex items-center justify-center text-amber-400 text-xl mb-5">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-2 uppercase">Heavy Duty &amp; Long Lasting</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Tough, moisture-resistant, and abrasion-proof outer sheathing designed for underground, industrial, and concealed wiring longevity.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-navy-950 border border-amber-500/25 rounded-2xl p-6 card-hover">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/15 border border-amber-400/40 flex items-center justify-center text-amber-400 text-xl mb-5">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-2 uppercase">Available Online &amp; In-Store</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Order directly online through <strong class="text-amber-300">SHIVAM WIRES</strong> or visit our Chandni Chowk, Bowbazar store for immediate dispatch.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Product Catalog Section -->
+  <section id="catalog" class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div>
+          <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">SHIVAM WIRES &bull; All Kinds of Cable &amp; Wires</span>
+          <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white mt-1 uppercase">
+            PRODUCT <span class="brand-gold-text">CATALOG</span>
+          </h2>
+          <p class="text-slate-400 mt-2 text-sm sm:text-base max-w-2xl">
+            Select your wire category, pick the required wire gauge/size (sq.mm) and color/core variant, and add items to your Quote List to request instant rates on WhatsApp or Email.
+          </p>
+        </div>
+
+        <!-- Search Box -->
+        <div class="relative w-full md:w-72">
+          <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+          <input
+            type="text"
+            id="catalog-search"
+            oninput="filterCatalog()"
+            placeholder="Search wires, 2.5 sq.mm, armoured..."
+            class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-navy-900 border border-white/15 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-amber-400"
+          />
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div id="category-tabs" class="flex flex-wrap gap-2 mb-10">
+        <button onclick="setCategory('all')" data-cat="all" class="cat-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-amber-500 text-navy-950 transition">
+          All Cables &amp; Wires (5)
+        </button>
+        <button onclick="setCategory('house')" data-cat="house" class="cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-navy-900 text-slate-300 hover:text-white border border-white/10 transition">
+          House Wiring FR/FRLS
+        </button>
+        <button onclick="setCategory('flexible')" data-cat="flexible" class="cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-navy-900 text-slate-300 hover:text-white border border-white/10 transition">
+          Multi-Core Flexible
+        </button>
+        <button onclick="setCategory('armoured')" data-cat="armoured" class="cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-navy-900 text-slate-300 hover:text-white border border-white/10 transition">
+          Armoured Power Cables
+        </button>
+        <button onclick="setCategory('submersible')" data-cat="submersible" class="cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-navy-900 text-slate-300 hover:text-white border border-white/10 transition">
+          Submersible Flat Cables
+        </button>
+        <button onclick="setCategory('coaxial')" data-cat="coaxial" class="cat-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-navy-900 text-slate-300 hover:text-white border border-white/10 transition">
+          Coaxial &amp; Networking
+        </button>
+      </div>
+
+      <!-- Product Grid -->
+      <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7"></div>
+
+      <!-- Empty Search State -->
+      <div id="catalog-empty" class="hidden text-center py-16 bg-navy-900/50 rounded-3xl border border-white/10">
+        <i class="fa-solid fa-plug-circle-xmark text-4xl text-amber-500 mb-3"></i>
+        <h3 class="text-xl font-bold text-white">No matching cables found</h3>
+        <p class="text-slate-400 text-sm mt-1">Clear your search filter or message SHIVAM WIRES directly for custom sizes.</p>
+        <button onclick="resetCatalogFilters()" class="mt-4 px-5 py-2 rounded-xl gold-btn-gradient text-navy-950 font-bold text-sm">
+          Show All Products
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bulk / Contractor Supply Banner -->
+  <section id="bulk-supply" class="py-16 bg-gradient-to-r from-navy-900 via-navy-800 to-navy-900 border-y border-amber-500/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-navy-950/95 border border-amber-400/40 rounded-3xl p-8 sm:p-12 shadow-2xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8">
+            <span class="inline-block px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-wider mb-3">
+              SHIVAM WIRES &bull; Wholesale &amp; Retail Trade Desk
+            </span>
+            <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mb-3 uppercase">
+              ORDER ONLINE OR REQUEST BULK CONTRACTOR RATES
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+              Whether you need a single 90m coil for home renovation or bulk armoured drums for commercial projects, <strong class="text-amber-400">SHIVAM WIRES</strong> provides competitive pricing and fast delivery from our Bowbazar, Kolkata hub.
+            </p>
+            <div class="flex flex-wrap gap-4 text-xs sm:text-sm text-amber-300 font-semibold">
+              <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-amber-400"></i> 90m &amp; 180m Standard Coils</span>
+              <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-amber-400"></i> Cut-Length Drum Supply</span>
+              <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-amber-400"></i> Direct WhatsApp Ordering</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 flex flex-col gap-3">
+            <button onclick="toggleQuoteDrawer(true)" class="w-full py-4 px-6 rounded-2xl gold-btn-gradient text-navy-950 font-extrabold text-base shadow-lg shadow-amber-500/25 flex items-center justify-center gap-2 transition">
+              <i class="fa-solid fa-list-check"></i>
+              <span>Open Quote Cart</span>
+            </button>
+            <a href="tel:+916290665018" class="w-full py-3.5 px-6 rounded-2xl bg-navy-800 hover:bg-navy-700 border border-white/15 text-white font-bold text-sm flex items-center justify-center gap-2 transition">
+              <i class="fa-solid fa-phone text-amber-400"></i>
+              <span>Call: +91 6290665018</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Store Location & Contact Section -->
+  <section id="contact" class="py-16 lg:py-24 bg-navy-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">Get In Touch With SHIVAM WIRES</span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white mt-2 uppercase">
+          CONTACT &amp; <span class="brand-gold-text">STORE LOCATION</span>
+        </h2>
+        <p class="text-slate-400 mt-2 text-sm sm:text-base">
+          Visit our store near Chandni Chowk, Bowbazar, Kolkata or send your wire requirement directly online.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <!-- Left Contact Cards & Direct Inquiry Form -->
+        <div class="lg:col-span-6 flex flex-col justify-between gap-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Phone / WhatsApp Card -->
+            <div class="bg-navy-950 border border-white/10 rounded-2xl p-5">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center mb-3">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <p class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Call / WhatsApp</p>
+              <a href="tel:+916290665018" class="text-lg font-bold text-white hover:text-amber-400 transition block mt-1">
+                +91 6290665018
+              </a>
+              <a href="https://wa.me/916290665018" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-emerald-400 hover:underline mt-2 font-semibold">
+                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp &rarr;
+              </a>
+            </div>
+
+            <!-- Email Card -->
+            <div class="bg-navy-950 border border-white/10 rounded-2xl p-5">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center mb-3">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <p class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Email Us</p>
+              <a href="mailto:shivamchowdhary432@gmail.com" class="text-sm sm:text-base font-bold text-white hover:text-amber-400 transition block mt-1 break-all">
+                shivamchowdhary432@gmail.com
+              </a>
+              <span class="text-xs text-slate-400 block mt-2">Quick response for quotes &amp; bulk lists</span>
+            </div>
+
+            <!-- Store Address Card -->
+            <div class="sm:col-span-2 bg-navy-950 border border-amber-500/40 rounded-2xl p-5 flex items-start gap-4">
+              <div class="w-11 h-11 rounded-xl gold-btn-gradient text-navy-950 flex items-center justify-center shrink-0 text-lg font-bold">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-wider text-amber-400 font-bold">SHIVAM WIRES &bull; Store Address</p>
+                <p class="text-base sm:text-lg font-bold text-white mt-0.5">
+                  2, Bepari Tola Lane, Near: Chandni Chowk, Bowbazar, Kolkata - 700054
+                </p>
+                <p class="text-xs text-slate-400 mt-1">
+                  Mon – Sat: 10:30 AM – 8:30 PM &bull; Kolkata, West Bengal
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Direct Inquiry Form -->
+          <form onsubmit="handleDirectContactSubmit(event)" class="bg-navy-950 border border-white/10 rounded-2xl p-6 space-y-4">
+            <h3 class="font-display font-bold text-xl text-white uppercase">Send a Quick Inquiry to SHIVAM WIRES</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-medium text-slate-300 mb-1">Your Name *</label>
+                <input type="text" id="contact-name" required placeholder="e.g. Rajesh Sharma" class="w-full px-3.5 py-2.5 rounded-xl bg-navy-900 border border-white/15 text-sm text-white focus:outline-none focus:border-amber-400" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-slate-300 mb-1">Phone / WhatsApp *</label>
+                <input type="tel" id="contact-phone" required placeholder="e.g. +91 98300 XXXXX" class="w-full px-3.5 py-2.5 rounded-xl bg-navy-900 border border-white/15 text-sm text-white focus:outline-none focus:border-amber-400" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1">Cable / Wire Requirement *</label>
+              <textarea id="contact-msg" rows="3" required placeholder="Enter wire type, sq.mm gauge, or coil quantity needed..." class="w-full px-3.5 py-2.5 rounded-xl bg-navy-900 border border-white/15 text-sm text-white focus:outline-none focus:border-amber-400"></textarea>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <button type="submit" class="flex-1 py-3 px-5 rounded-xl gold-btn-gradient text-navy-950 font-extrabold text-sm shadow-lg shadow-amber-500/20 transition">
+                <i class="fa-brands fa-whatsapp mr-1.5"></i> Send via WhatsApp
+              </button>
+              <button type="button" onclick="sendDirectEmail()" class="py-3 px-5 rounded-xl bg-navy-800 hover:bg-navy-700 border border-white/15 text-white font-bold text-sm transition">
+                <i class="fa-solid fa-envelope mr-1.5 text-amber-400"></i> Send via Email
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right Map Preview Card -->
+        <div class="lg:col-span-6 flex flex-col bg-navy-950 border border-white/10 rounded-2xl overflow-hidden shadow-xl">
+          <div class="p-4 bg-navy-950 border-b border-white/10 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span class="text-sm font-bold text-white">SHIVAM WIRES &bull; Chandni Chowk, Bowbazar</span>
+            </div>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=2+Bepari+Tola+Lane+Chandni+Chowk+Bowbazar+Kolkata+700054"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-3 py-1.5 rounded-lg bg-amber-500/15 hover:bg-amber-500/25 text-amber-400 text-xs font-bold transition flex items-center gap-1.5"
+            >
+              <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+            </a>
+          </div>
+
+          <div class="relative flex-1 min-h-[340px] bg-navy-800">
+            <iframe
+              title="SHIVAM WIRES Location Map - 2 Bepari Tola Lane Chandni Chowk Bowbazar Kolkata 700054"
+              class="w-full h-full min-h-[340px] border-0 filter contrast-110"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=88.3485%2C22.5615%2C88.3625%2C22.5715&amp;layer=mapnik&amp;marker=22.5665%2C88.3555"
+            ></iframe>
+          </div>
+
+          <div class="p-4 bg-navy-950 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-300">
+            <span><i class="fa-solid fa-train-subway text-amber-400 mr-1.5"></i> Near Chandni Chowk Metro Station, Bowbazar</span>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=2+Bepari+Tola+Lane+Chandni+Chowk+Bowbazar+Kolkata+700054"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-amber-400 font-bold hover:underline"
+            >
+              Open in Google Maps &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer with Prominent SHIVAM WIRES Branding & Copyright -->
+  <footer class="bg-navy-950 border-t border-amber-500/30 pt-12 pb-8 text-slate-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-white/10">
+        <div>
+          <span class="font-display font-extrabold text-3xl brand-gold-text tracking-wider uppercase block">
+            SHIVAM WIRES
+          </span>
+          <p class="text-xs font-bold uppercase tracking-wider text-amber-300/90 mt-1">
+            Your Trusted Partner in Electrical &amp; Power Solutions
+          </p>
+          <p class="mt-3 text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Supplying All Kinds of Cable &amp; Wires — 100% pure copper, fire-retardant, heavy-duty &amp; long-lasting electrical solutions available online and at our Kolkata store.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold uppercase tracking-wider text-xs mb-3">Quick Links</h4>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="#home" class="hover:text-amber-400 transition">Home</a></li>
+            <li><a href="#about-trust" class="hover:text-amber-400 transition">Why Choose SHIVAM WIRES</a></li>
+            <li><a href="#catalog" class="hover:text-amber-400 transition">All Cables &amp; Wires Catalog</a></li>
+            <li><a href="#contact" class="hover:text-amber-400 transition">Store Address &amp; Map</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold uppercase tracking-wider text-xs mb-3">Contact SHIVAM WIRES</h4>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-amber-500"></i>
+              <a href="tel:+916290665018" class="hover:text-amber-400 font-semibold text-white">+91 6290665018</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-envelope text-amber-500"></i>
+              <a href="mailto:shivamchowdhary432@gmail.com" class="hover:text-amber-400 break-all">shivamchowdhary432@gmail.com</a>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-location-dot text-amber-500 mt-1"></i>
+              <span>2, Bepari Tola Lane, Near: Chandni Chowk, Bowbazar, Kolkata - 700054</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <p class="font-semibold text-slate-300">&copy; <span id="year"></span> <span class="text-amber-400 font-bold">SHIVAM WIRES</span>. All rights reserved.</p>
+        <p>All Kinds of Cable &amp; Wires &bull; Kolkata - 700054</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quote & WhatsApp Action Buttons -->
+  <div class="fixed bottom-5 right-5 z-40 flex flex-col gap-3">
+    <button
+      onclick="toggleQuoteDrawer(true)"
+      aria-label="Open Quote Cart"
+      class="w-13 h-13 p-3.5 rounded-full gold-btn-gradient text-navy-950 shadow-xl shadow-amber-500/30 flex items-center justify-center relative hover:scale-105 transition"
+    >
+      <i class="fa-solid fa-file-invoice text-xl"></i>
+      <span id="float-cart-badge" class="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full bg-navy-950 border border-amber-400 text-amber-400 text-xs font-extrabold flex items-center justify-center">
+        0
+      </span>
+    </button>
+    <a
+      href="https://wa.me/916290665018?text=Hello%20SHIVAM%20WIRES,%20I%20would%20like%20to%20enquire%20about%20wires%20and%20cables."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+      class="w-13 h-13 p-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white shadow-xl shadow-emerald-500/30 flex items-center justify-center hover:scale-105 transition"
+    >
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
+  </div>
+
+  <!-- Interactive Quote Cart Slide-Over Drawer -->
+  <div id="quote-drawer-backdrop" onclick="toggleQuoteDrawer(false)" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  <aside id="quote-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-navy-950 border-l border-amber-500/40 z-50 transform translate-x-full transition-transform duration-300 flex flex-col shadow-2xl">
+    <!-- Drawer Header -->
+    <div class="p-5 bg-navy-900 border-b border-white/10 flex items-center justify-between">
+      <div>
+        <span class="text-[11px] font-bold uppercase tracking-widest text-amber-400">SHIVAM WIRES</span>
+        <h3 class="font-display font-extrabold text-2xl brand-gold-text uppercase leading-none mt-0.5">QUOTE / ORDER LIST</h3>
+        <p class="text-xs text-slate-400 mt-1">Send selected wires directly to WhatsApp or Email</p>
+      </div>
+      <button onclick="toggleQuoteDrawer(false)" class="w-9 h-9 rounded-xl bg-navy-800 hover:bg-navy-700 text-slate-300 hover:text-white flex items-center justify-center">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+    </div>
+
+    <!-- Drawer Items Container -->
+    <div id="quote-items-container" class="flex-1 overflow-y-auto p-5 space-y-3"></div>
+
+    <!-- Drawer Submission Footer -->
+    <div class="p-5 bg-navy-900 border-t border-white/10 space-y-3">
+      <div class="grid grid-cols-2 gap-2.5">
+        <input type="text" id="quote-customer-name" placeholder="Your Name / Company" class="px-3 py-2 rounded-xl bg-navy-950 border border-white/15 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-amber-400" />
+        <input type="tel" id="quote-customer-phone" placeholder="Your Phone Number" class="px-3 py-2 rounded-xl bg-navy-950 border border-white/15 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-amber-400" />
+      </div>
+      <input type="text" id="quote-customer-city" placeholder="Delivery Area / Site Location (e.g. Kolkata, Howrah)" class="w-full px-3 py-2 rounded-xl bg-navy-950 border border-white/15 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-amber-400" />
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+        <button onclick="submitQuoteWhatsApp()" class="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg transition">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Send on WhatsApp</span>
+        </button>
+        <button onclick="submitQuoteEmail()" class="w-full py-3 px-4 rounded-xl gold-btn-gradient text-navy-950 font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg transition">
+          <i class="fa-solid fa-envelope"></i>
+          <span>Send via Email</span>
+        </button>
+      </div>
+      <button onclick="clearQuoteCart()" class="w-full text-center text-xs text-slate-400 hover:text-rose-400 transition pt-1">
+        Clear Quote List
+      </button>
+    </div>
+  </aside>
+
+  <!-- JavaScript Application Logic -->
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Product Catalog Data
+    const PRODUCTS = [
+      {
+        id: 'house-wiring-fr',
+        category: 'house',
+        badge: '100% Pure Copper',
+        name: 'House Wiring FR/FRLS PVC Copper Wires',
+        description: 'Flame-retardant multi-strand 100% pure copper wires engineered for safe residential, office, and commercial concealed wiring.',
+        sizes: ['0.75 sq.mm', '1.0 sq.mm', '1.5 sq.mm', '2.5 sq.mm', '4.0 sq.mm', '6.0 sq.mm'],
+        variants: ['Red (Phase)', 'Yellow (Phase)', 'Blue (Phase)', 'Black (Neutral)', 'Green (Earthing)'],
+        unitLabel: 'Coils (90m)',
+        svgType: 'house'
+      },
+      {
+        id: 'multicore-flexible',
+        category: 'flexible',
+        badge: 'Fire Retardant',
+        name: 'Multi-Core Flexible Industrial Cables',
+        description: 'High-flexibility bunched copper conductors with heavy-duty PVC outer sheath for control panels, motors, and industrial equipment.',
+        sizes: ['2 Core x 1.0 sq.mm', '3 Core x 1.5 sq.mm', '3 Core x 2.5 sq.mm', '4 Core x 2.5 sq.mm', '4 Core x 4.0 sq.mm', '4 Core x 6.0 sq.mm'],
+        variants: ['Black Round Sheath', 'Grey Industrial Sheath', 'White Flexible Sheath'],
+        unitLabel: 'Coils (100m)',
+        svgType: 'flexible'
+      },
+      {
+        id: 'armoured-power',
+        category: 'armoured',
+        badge: 'Heavy Duty',
+        name: 'Heavy Duty Armoured Power Cables',
+        description: 'XLPE/PVC insulated galvanized steel wire/strip armoured cables designed for underground mains and high-load industrial power.',
+        sizes: ['2 Core x 6 sq.mm', '3.5 Core x 25 sq.mm', '3.5 Core x 50 sq.mm', '4 Core x 16 sq.mm', '4 Core x 35 sq.mm', '4 Core x 95 sq.mm'],
+        variants: ['Copper Conductor (XLPE)', 'Copper Conductor (PVC)', 'Aluminium Conductor (XLPE)'],
+        unitLabel: 'Meters',
+        svgType: 'armoured'
+      },
+      {
+        id: 'submersible-flat',
+        category: 'submersible',
+        badge: 'Water & Abrasion Proof',
+        name: 'Submersible Flat Cables',
+        description: '3-core flat heavy-duty waterproof cables built to withstand continuous underwater operation in agricultural and domestic pumps.',
+        sizes: ['3 Core x 1.5 sq.mm', '3 Core x 2.5 sq.mm', '3 Core x 4.0 sq.mm', '3 Core x 6.0 sq.mm', '3 Core x 10.0 sq.mm'],
+        variants: ['Blue Heavy Jacket', 'Black Heavy Jacket'],
+        unitLabel: 'Meters',
+        svgType: 'submersible'
+      },
+      {
+        id: 'coaxial-networking',
+        category: 'coaxial',
+        badge: 'High Conductivity',
+        name: 'Coaxial & Networking Cables',
+        description: 'Low-loss copper-shielded coaxial TV/CCTV cables, high-speed CAT6 LAN networking cables, and multi-pair telephone wires.',
+        sizes: ['RG-6 Coaxial', 'RG-11 Coaxial', 'CAT6 UTP LAN', '3+1 CCTV Cable', '2 Pair Telephone'],
+        variants: ['100m Coil', '305m Pull Box'],
+        unitLabel: 'Boxes / Coils',
+        svgType: 'coaxial'
+      }
+    ];
+
+    let selectedCategory = 'all';
+    let quoteCart = [];
+
+    function getProductSVG(type) {
+      switch (type) {
+        case 'house':
+          return `
+            <svg viewBox="0 0 240 115" class="w-full h-28" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="65" cy="62" rx="42" ry="18" fill="#dc2626" />
+              <ellipse cx="65" cy="55" rx="42" ry="18" fill="#ef4444" />
+              <ellipse cx="65" cy="55" rx="18" ry="7" fill="#050d1e" />
+              <ellipse cx="125" cy="67" rx="42" ry="18" fill="#eab308" />
+              <ellipse cx="125" cy="60" rx="42" ry="18" fill="#facc15" />
+              <ellipse cx="125" cy="60" rx="18" ry="7" fill="#050d1e" />
+              <ellipse cx="180" cy="59" rx="40" ry="17" fill="#2563eb" />
+              <ellipse cx="180" cy="52" rx="40" ry="17" fill="#3b82f6" />
+              <ellipse cx="180" cy="52" rx="17" ry="7" fill="#050d1e" />
+            </svg>`;
+        case 'flexible':
+          return `
+            <svg viewBox="0 0 240 115" class="w-full h-28" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25 78 C65 78, 65 36, 115 36 L155 36" stroke="#334155" stroke-width="24" stroke-linecap="round" fill="none" />
+              <path d="M155 29 L188 29" stroke="#ef4444" stroke-width="6" stroke-linecap="round" />
+              <path d="M188 29 L208 29" stroke="#e88d5a" stroke-width="3.5" stroke-linecap="round" />
+              <path d="M155 36 L192 36" stroke="#22c55e" stroke-width="6" stroke-linecap="round" />
+              <path d="M192 36 L214 36" stroke="#e88d5a" stroke-width="3.5" stroke-linecap="round" />
+              <path d="M155 43 L186 43" stroke="#3b82f6" stroke-width="6" stroke-linecap="round" />
+              <path d="M186 43 L206 43" stroke="#e88d5a" stroke-width="3.5" stroke-linecap="round" />
+            </svg>`;
+        case 'armoured':
+          return `
+            <svg viewBox="0 0 240 115" class="w-full h-28" xmlns="http://www.w3.org/2000/svg">
+              <rect x="20" y="40" width="90" height="36" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1.5" />
+              <rect x="110" y="43" width="35" height="30" fill="#94a3b8" />
+              <path d="M113 43 L120 73 M123 43 L130 73 M133 43 L140 73" stroke="#1e293b" stroke-width="2" />
+              <rect x="145" y="42" width="35" height="9" rx="2" fill="#ef4444" />
+              <rect x="180" y="44" width="26" height="5" rx="1" fill="#e88d5a" />
+              <rect x="145" y="54" width="38" height="9" rx="2" fill="#facc15" />
+              <rect x="183" y="56" width="28" height="5" rx="1" fill="#e88d5a" />
+              <rect x="145" y="66" width="34" height="9" rx="2" fill="#3b82f6" />
+              <rect x="179" y="68" width="25" height="5" rx="1" fill="#e88d5a" />
+            </svg>`;
+        case 'submersible':
+          return `
+            <svg viewBox="0 0 240 115" class="w-full h-28" xmlns="http://www.w3.org/2000/svg">
+              <rect x="25" y="40" width="125" height="36" rx="8" fill="#1d4ed8" stroke="#60a5fa" stroke-width="1.5" />
+              <rect x="150" y="43" width="34" height="8" rx="2" fill="#ef4444" />
+              <rect x="184" y="45" width="24" height="4" fill="#e88d5a" />
+              <rect x="150" y="54" width="38" height="8" rx="2" fill="#facc15" />
+              <rect x="188" y="56" width="24" height="4" fill="#e88d5a" />
+              <rect x="150" y="65" width="34" height="8" rx="2" fill="#3b82f6" />
+              <rect x="184" y="67" width="24" height="4" fill="#e88d5a" />
+            </svg>`;
+        case 'coaxial':
+        default:
+          return `
+            <svg viewBox="0 0 240 115" class="w-full h-28" xmlns="http://www.w3.org/2000/svg">
+              <rect x="25" y="44" width="105" height="28" rx="6" fill="#0f172a" stroke="#475569" stroke-width="1.5" />
+              <rect x="130" y="47" width="24" height="22" fill="#cbd5e1" />
+              <rect x="154" y="50" width="26" height="16" fill="#f8fafc" />
+              <rect x="180" y="56" width="32" height="4" rx="2" fill="#f59e0b" />
+            </svg>`;
+      }
+    }
+
+    function renderCatalog() {
+      const grid = document.getElementById('product-grid');
+      const emptyState = document.getElementById('catalog-empty');
+      const searchQuery = document.getElementById('catalog-search').value.trim().toLowerCase();
+
+      const filtered = PRODUCTS.filter(prod => {
+        const matchesCat = selectedCategory === 'all' || prod.category === selectedCategory;
+        const matchesSearch =
+          !searchQuery ||
+          prod.name.toLowerCase().includes(searchQuery) ||
+          prod.description.toLowerCase().includes(searchQuery) ||
+          prod.sizes.some(s => s.toLowerCase().includes(searchQuery)) ||
+          prod.variants.some(v => v.toLowerCase().includes(searchQuery));
+        return matchesCat && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+      grid.innerHTML = filtered
+        .map(prod => {
+          const sizeOptions = prod.sizes.map(s => `<option value="${s}">${s}</option>`).join('');
+          const variantOptions = prod.variants.map(v => `<option value="${v}">${v}</option>`).join('');
+
+          return `
+            <div class="bg-navy-900 border border-white/10 rounded-3xl p-6 flex flex-col justify-between card-hover">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-3">
+                  <span class="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-400 text-xs font-bold">
+                    ${prod.badge}
+                  </span>
+                  <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">SHIVAM WIRES</span>
+                </div>
+
+                <div class="bg-navy-950/90 border border-white/5 rounded-2xl p-3 mb-4 flex items-center justify-center">
+                  ${getProductSVG(prod.svgType)}
+                </div>
+
+                <h3 class="font-display font-bold text-xl text-white leading-snug mb-2">
+                  ${prod.name}
+                </h3>
+                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-5">
+                  ${prod.description}
+                </p>
+              </div>
+
+              <div class="space-y-3 pt-4 border-t border-white/10">
+                <div class="grid grid-cols-2 gap-2.5">
+                  <div>
+                    <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1">Gauge / Size</label>
+                    <select id="size-${prod.id}" class="w-full px-2.5 py-2 rounded-xl bg-navy-950 border border-white/15 text-xs text-white focus:outline-none focus:border-amber-400">
+                      ${sizeOptions}
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1">Color / Type</label>
+                    <select id="variant-${prod.id}" class="w-full px-2.5 py-2 rounded-xl bg-navy-950 border border-white/15 text-xs text-white focus:outline-none focus:border-amber-400">
+                      ${variantOptions}
+                    </select>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <div class="w-28">
+                    <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1">${prod.unitLabel}</label>
+                    <input
+                      type="number"
+                      id="qty-${prod.id}"
+                      min="1"
+                      value="1"
+                      class="w-full px-3 py-2 rounded-xl bg-navy-950 border border-white/15 text-xs text-white font-bold focus:outline-none focus:border-amber-400"
+                    />
+                  </div>
+                  <button
+                    onclick="addToQuoteCart('${prod.id}')"
+                    class="flex-1 mt-4 py-2.5 px-4 rounded-xl gold-btn-gradient text-navy-950 font-extrabold text-xs sm:text-sm shadow-md shadow-amber-500/20 flex items-center justify-center gap-2 transition active:scale-95"
+                  >
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Add to Quote</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+        })
+        .join('');
+    }
+
+    function setCategory(cat) {
+      selectedCategory = cat;
+      document.querySelectorAll('.cat-btn').forEach(btn => {
+        if (btn.dataset.cat === cat) {
+          btn.classList.remove('bg-navy-900', 'text-slate-300', 'border', 'border-white/10');
+          btn.classList.add('bg-amber-500', 'text-navy-950', 'font-bold');
+        } else {
+          btn.classList.add('bg-navy-900', 'text-slate-300', 'border', 'border-white/10');
+          btn.classList.remove('bg-amber-500', 'text-navy-950', 'font-bold');
+        }
+      });
+      renderCatalog();
+    }
+
+    function filterCatalog() {
+      renderCatalog();
+    }
+
+    function resetCatalogFilters() {
+      document.getElementById('catalog-search').value = '';
+      setCategory('all');
+    }
+
+    function toggleMobileMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+
+    function toggleQuoteDrawer(open) {
+      const drawer = document.getElementById('quote-drawer');
+      const backdrop = document.getElementById('quote-drawer-backdrop');
+      if (open) {
+        renderQuoteCart();
+        backdrop.classList.remove('hidden');
+        drawer.classList.remove('translate-x-full');
+      } else {
+        drawer.classList.add('translate-x-full');
+        backdrop.classList.add('hidden');
+      }
+    }
+
+    function addToQuoteCart(productId) {
+      const product = PRODUCTS.find(p => p.id === productId);
+      if (!product) return;
+
+      const size = document.getElementById(`size-${productId}`).value;
+      const variant = document.getElementById(`variant-${productId}`).value;
+      const qtyInput = document.getElementById(`qty-${productId}`);
+      const qty = Math.max(1, parseInt(qtyInput.value, 10) || 1);
+
+      const existingIndex = quoteCart.findIndex(
+        item => item.productId === productId && item.size === size && item.variant === variant
+      );
+
+      if (existingIndex > -1) {
+        quoteCart[existingIndex].qty += qty;
+      } else {
+        quoteCart.push({
+          productId,
+          name: product.name,
+          size,
+          variant,
+          qty,
+          unitLabel: product.unitLabel
+        });
+      }
+
+      updateCartBadges();
+      showToast(`Added ${qty} × ${product.name} (${size}) to Quote List`);
+    }
+
+    function removeFromQuoteCart(index) {
+      quoteCart.splice(index, 1);
+      updateCartBadges();
+      renderQuoteCart();
+    }
+
+    function updateItemQty(index, delta) {
+      if (!quoteCart[index]) return;
+      quoteCart[index].qty = Math.max(1, quoteCart[index].qty + delta);
+      updateCartBadges();
+      renderQuoteCart();
+    }
+
+    function clearQuoteCart() {
+      if (quoteCart.length === 0) return;
+      quoteCart = [];
+      updateCartBadges();
+      renderQuoteCart();
+      showToast('Quote list cleared.');
+    }
+
+    function updateCartBadges() {
+      const totalItems = quoteCart.reduce((acc, item) => acc + item.qty, 0);
+      document.getElementById('nav-cart-badge').textContent = totalItems;
+      document.getElementById('float-cart-badge').textContent = totalItems;
+    }
+
+    function renderQuoteCart() {
+      const container = document.getElementById('quote-items-container');
+      if (quoteCart.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-12 px-4">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-navy-900 border border-white/10 text-amber-400 flex items-center justify-center text-2xl mb-3">
+              <i class="fa-solid fa-file-circle-plus"></i>
+            </div>
+            <h4 class="text-white font-bold text-base">Your Quote List is Empty</h4>
+            <p class="text-slate-400 text-xs mt-1 leading-relaxed">
+              Add wires &amp; cables from the catalog to build an instant price inquiry for SHIVAM WIRES.
+            </p>
+            <button onclick="toggleQuoteDrawer(false)" class="mt-4 px-4 py-2 rounded-xl bg-amber-500/20 text-amber-400 text-xs font-bold hover:bg-amber-500/30 transition">
+              Browse Catalog
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = quoteCart
+        .map(
+          (item, idx) => `
+          <div class="bg-navy-900 border border-white/10 rounded-2xl p-4 flex items-start justify-between gap-3">
+            <div class="flex-1">
+              <h4 class="text-white font-bold text-sm leading-snug">${item.name}</h4>
+              <p class="text-xs text-amber-400 font-medium mt-1">${item.size} &bull; ${item.variant}</p>
+              <div class="flex items-center gap-2 mt-3">
+                <button onclick="updateItemQty(${idx}, -1)" class="w-7 h-7 rounded-lg bg-navy-800 hover:bg-navy-700 text-white text-xs font-bold">-</button>
+                <span class="text-xs font-bold text-white px-2">${item.qty} <span class="text-slate-400 font-normal">${item.unitLabel}</span></span>
+                <button onclick="updateItemQty(${idx}, 1)" class="w-7 h-7 rounded-lg bg-navy-800 hover:bg-navy-700 text-white text-xs font-bold">+</button>
+              </div>
+            </div>
+            <button onclick="removeFromQuoteCart(${idx})" class="text-slate-400 hover:text-rose-400 p-1" aria-label="Remove item">
+              <i class="fa-solid fa-trash-can text-sm"></i>
+            </button>
+          </div>
+        `
+        )
+        .join('');
+    }
+
+    function buildQuoteMessageText() {
+      const custName = document.getElementById('quote-customer-name').value.trim() || 'Customer';
+      const custPhone = document.getElementById('quote-customer-phone').value.trim();
+      const custCity = document.getElementById('quote-customer-city').value.trim();
+
+      let lines = [
+        'Hello SHIVAM WIRES, I would like a price quotation for the following items:',
+        ''
+      ];
+
+      if (quoteCart.length === 0) {
+        lines.push('- General Wire & Cable Price List Inquiry');
+      } else {
+        quoteCart.forEach((item, i) => {
+          lines.push(`${i + 1}. ${item.name} | Size: ${item.size} | Type: ${item.variant} | Qty: ${item.qty} ${item.unitLabel}`);
+        });
+      }
+
+      lines.push('');
+      lines.push(`Name: ${custName}`);
+      if (custPhone) lines.push(`Phone: ${custPhone}`);
+      if (custCity) lines.push(`Location: ${custCity}`);
+
+      return lines.join('\n');
+    }
+
+    function submitQuoteWhatsApp() {
+      const text = encodeURIComponent(buildQuoteMessageText());
+      window.open(`https://wa.me/916290665018?text=${text}`, '_blank', 'noopener,noreferrer');
+    }
+
+    function submitQuoteEmail() {
+      const subject = encodeURIComponent('Price Quotation Inquiry - SHIVAM WIRES');
+      const body = encodeURIComponent(buildQuoteMessageText());
+      window.location.href = `mailto:shivamchowdhary432@gmail.com?subject=${subject}&body=${body}`;
+    }
+
+    function handleDirectContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('contact-name').value.trim();
+      const phone = document.getElementById('contact-phone').value.trim();
+      const msg = document.getElementById('contact-msg').value.trim();
+
+      const text = encodeURIComponent(
+        `Hello SHIVAM WIRES,\n\nName: ${name}\nPhone: ${phone}\nInquiry: ${msg}`
+      );
+      window.open(`https://wa.me/916290665018?text=${text}`, '_blank', 'noopener,noreferrer');
+    }
+
+    function sendDirectEmail() {
+      const name = document.getElementById('contact-name').value.trim() || 'Customer';
+      const phone = document.getElementById('contact-phone').value.trim();
+      const msg = document.getElementById('contact-msg').value.trim() || 'Please share your latest wire & cable catalog and pricing.';
+
+      const subject = encodeURIComponent(`Website Inquiry from ${name} - SHIVAM WIRES`);
+      const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\n\nRequirement:\n${msg}`);
+      window.location.href = `mailto:shivamchowdhary432@gmail.com?subject=${subject}&body=${body}`;
+    }
+
+    function showToast(message) {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      toast.className =
+        'bg-navy-900 border border-amber-400/60 text-white px-4 py-3 rounded-2xl shadow-2xl flex items-center justify-between gap-3 text-xs sm:text-sm pointer-events-auto transition-all duration-300';
+      toast.innerHTML = `
+        <div class="flex items-center gap-2.5">
+          <i class="fa-solid fa-circle-check text-amber-400 text-base"></i>
+          <span>${message}</span>
+        </div>
+        <button onclick="toggleQuoteDrawer(true)" class="text-amber-400 font-bold hover:underline shrink-0">View</button>
+      `;
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(10px)';
+        setTimeout(() => toast.remove(), 300);
+      }, 3200);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderCatalog();
+    });
+  </script>
+</body>
+</html>
